@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+
+body {
+    max-height: 100vh;
+    max-width: 100%;
+    background-color: hsl(257, 40%, 49%);
+    background-image: url(images/bg-desktop.svg);
+}
+
+.logo {
+    margin-inline: 3.125rem; /* 50px to rem */
+    margin-top: 2.5rem; /* 40px to rem */
+}
+
+/* Main content container */
+.main-cointainer {
+    max-width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+
+.main-cointainer .image img {
+    max-width: 50rem;
+    height: auto;
+    margin-inline: 2.5rem; /* 40px to rem */
+    padding: 0.625rem; /* 10px to rem */
+}
+
+.content h1 {
+    font-family: Poppins;
+    font-size: 2.5rem;
+}
+
+.content p {
+    line-height: 1.6rem;
+}
+
+/* Button styles */
+.content button {
+    width: 50%;
+    height: 6vh;
+    margin-top: 1.25rem; /* 20px to rem */
+    background-color: #ffffff;
+    color: hsl(257, 40%, 49%);
+    border: none;
+    outline: none;
+    font-size: 1.2rem; /* 120% of default size */
+    font-weight: 700;
+    border-radius: 1.875rem; /* 30px to rem */
+    transition: 0.2s linear;
+    cursor: pointer;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3); /* Shadow size in rem */
+}
+
+.content button:hover {
+    scale: 1.1;
+    color: #ffffff;
+    background-color: hsl(300, 69%, 71%);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3); /* Shadow size in rem */
+}
+  
+/* Social icons section at the bottom */
+.social-icons {
+    position: absolute;
+    bottom: 1.25rem; /* 20px to rem */
+    right: 1.25rem; /* 20px to rem */
+    display: flex;
+    margin-right: 1rem; /* Already in rem */
+    gap: 1.25rem; /* 20px to rem */
+}
+
+.social-icons img {
+    width: 1.875rem; /* 30px to rem */
+    height: 1.875rem; /* 30px to rem */
+}
+  
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    body {
+        background-image: url(images/bg-mobile.svg); /* Use mobile background image */
+        background-size: cover;
+    }
+
+    .main-cointainer {
+        flex-direction: column; /* Stack the image and content vertically */
+        text-align: center; /* Center the text for better mobile display */
+        height: auto; /* Adjust the height for mobile view */
+        padding: 1.25rem; /* 20px to rem */
+    }
+
+    .main-cointainer .image img {
+        max-width: 80%;
+        margin: 0 auto; /* Center the image */
+        padding: 0; /* Remove extra padding */
+    }
+
+    .content h1 {
+        font-size: 2.5rem; /* Adjust the font size for smaller screens */
+    }
+
+    .content p {
+        font-size: 1.3rem;
+    }
+
+    .content button {
+        width: 70%; /* Adjust button width for mobile */
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 1.25rem; /* 20px to rem */
+        padding: 0.625rem 0; /* 10px to rem */
+    }
+
+    .social-icons img {
+        width: 1.875rem; /* 30px to rem */
+        height: 1.875rem; /* 30px to rem */
+    }
+}
